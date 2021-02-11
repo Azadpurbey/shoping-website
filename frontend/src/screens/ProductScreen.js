@@ -13,6 +13,7 @@ import Rating from '../components/Rating'
 import axios from 'axios'
 
 const ProductScreen = ({ match }) => {
+  console.log(match)
   const [product, setProduct] = useState({})
   useEffect(() => {
     const fetchProduct = async () => {

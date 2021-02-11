@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Col className='text-center'>Copyright &copr; AzadShop</Col>
+        <Col className='text-center'>Copyright &copy; AzadShop</Col>
       </Container>
     </footer>
   )
