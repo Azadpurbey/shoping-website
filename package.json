@@ -22,7 +22,10 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.15"
+    "logger": "^0.0.1",
+    "mongoose": "^5.11.15",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
