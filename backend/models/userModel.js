@@ -26,10 +26,12 @@ const userSchema = mongoose.Schema(
   }
 )
 
+//password dcrypt
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password)
 }
 
+//password encrypt:  pre is used run this midlleware automatically before save and will when password modified.........
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) {
     next()

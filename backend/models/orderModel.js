@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 
 const orderSchema = mongoose.Schema(
   {
-    name: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
-      require: true,
+      required: true,
       ref: 'User',
     },
     orderItems: [
@@ -21,48 +21,51 @@ const orderSchema = mongoose.Schema(
       },
     ],
     shippingAddress: {
-      address: { type: String, requirec: true },
-      city: { type: String, requirec: true },
-      postalCode: { type: String, requirec: true },
-      country: { type: String, requirec: true },
+      address: { type: String, required: true },
+      city: { type: String, required: true },
+      postalCode: { type: String, required: true },
+      country: { type: String, required: true },
     },
     paymentMethod: {
       type: String,
-      require: true,
+      required: true,
     },
     paymentResult: {
       id: { type: String },
       status: { type: String },
       update_time: { type: String },
-      emailaddress: { type: String },
+      email_address: { type: String },
     },
     taxPrice: {
-      type: String,
-      require: true,
+      type: Number,
+      required: true,
       default: 0.0,
     },
     shippingPrice: {
-      type: String,
-      require: true,
+      type: Number,
+      required: true,
       default: 0.0,
     },
     totalPrice: {
-      type: String,
-      require: true,
+      type: Number,
+      required: true,
       default: 0.0,
     },
     isPaid: {
       type: Boolean,
-      require: true,
+      required: true,
       default: false,
     },
-    PaidAt: {
+    paidAt: {
+      type: Date,
+    },
+    isDelivered: {
       type: Boolean,
-      require: true,
+      required: true,
       default: false,
     },
-    delevierAt: {
-      type: Boolean,
+    deliveredAt: {
+      type: Date,
     },
   },
   {
@@ -70,6 +73,6 @@ const orderSchema = mongoose.Schema(
   }
 )
 
-const Order = mongoose.model('order', orderSchema)
+const Order = mongoose.model('Order', orderSchema)
 
 export default Order
