@@ -12,12 +12,19 @@ import {
 } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Rating from '../components/Rating'
-import { listProductDetails } from '../actions/productActions'
+import {
+  listProductDetails,
+  createProductReview,
+} from '../actions/productActions'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import { PRODUCT_CREATE_REVIEWS_RESET } from '../constants/productConstants'
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
+  const [rating, setRating] = useState(0)
+  const [comment, setComment] = useState('')
+
   const dispatch = useDispatch()
 
   const productDetails = useSelector((state) => state.productDetails)

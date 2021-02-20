@@ -11,9 +11,10 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d"
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "",
+  "author": "Azad",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -24,6 +25,7 @@
     "jsonwebtoken": "^8.5.1",
     "logger": "^0.0.1",
     "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6"
   },
