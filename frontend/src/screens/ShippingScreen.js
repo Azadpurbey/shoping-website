@@ -8,7 +8,7 @@ import CheckoutSteps from '../components/CheckoutSteps'
 
 const ShippingScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart)
-  console.log(cart)
+  // console.log(cart)
   const { shippingAddress } = cart
 
   const [address, setAddress] = useState(shippingAddress.address)

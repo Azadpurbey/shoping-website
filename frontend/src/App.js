@@ -17,6 +17,7 @@ import UserListScreen from './screens/UserListScreen'
 import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
+import OrderListScreen from './screens/OrderListScreen'
 
 const App = () => {
   return (
@@ -24,27 +25,23 @@ const App = () => {
       <Header />
       <main className='py-3'>
         <Container>
-          <Route exact path='/order/:id' component={OrderScreen} />
-          <Route exact path='/shipping' component={ShippingScreen} />
-          <Route exact path='/payment' component={PaymentScreen} />
-          <Route exact path='/placeOrder' component={PlaceOrderScreen} />
-          <Route exact path='/login' component={LoginScreen} />
-          <Route exact path='/register' component={RegistrationScreen} />
-          <Route exact path='/profile' component={ProfileScreen} />
+          <Route path='/shipping' component={ShippingScreen} />
+          <Route path='/payment' component={PaymentScreen} />
+          <Route path='/placeOrder' component={PlaceOrderScreen} />
+          <Route path='/login' component={LoginScreen} />
+          <Route path='/register' component={RegistrationScreen} />
+          <Route path='/profile' component={ProfileScreen} />
+
           <Route path='/product/:id' component={ProductScreen} />
+          <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
+          <Route path='/admin/productlist' component={ProductListScreen} />
+
+          <Route path='/admin/userlist' component={UserListScreen} />
+          <Route path='/admin/user/:id/edit' component={UserEditScreen} />
+
           <Route path='/cart/:id?' component={CartScreen} />
-          <Route exact path='/admin/userlist' component={UserListScreen} />
-          <Route exact path='/admin/user/:id/edit' component={UserEditScreen} />
-          <Route
-            exact
-            path='/admin/product/:id/edit'
-            component={ProductEditScreen}
-          />
-          <Route
-            exact
-            path='/admin/productlist'
-            component={ProductListScreen}
-          />
+          <Route path='/order/:id' component={OrderScreen} />
+          <Route path='/admin/orderlist' component={OrderListScreen} />
           <Route exact path='/' component={HomeScreen} />
         </Container>
       </main>
