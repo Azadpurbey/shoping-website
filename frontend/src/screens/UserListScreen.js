@@ -41,11 +41,13 @@ const UserListScreen = ({ history }) => {
       ) : (
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>EMAIL</th>
-            <th>ADMIN</th>
-            <th></th>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>ADMIN</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
             {users.map((user) => (
