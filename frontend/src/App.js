@@ -42,6 +42,7 @@ const App = () => {
           <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/order/:id' component={OrderScreen} />
           <Route path='/admin/orderlist' component={OrderListScreen} />
+          <Route exact path='/search/:keyword' component={HomeScreen} />
           <Route exact path='/' component={HomeScreen} />
         </Container>
       </main>
