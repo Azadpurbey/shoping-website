@@ -22,13 +22,11 @@ const Header = ({ history }) => {
           <LinkContainer to='/'>
             <Navbar.Brand>AzadShop</Navbar.Brand>
           </LinkContainer>
+          <Route
+            render={({ history }) => <SearchBox history={history} />}></Route>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ml-auto'>
-              <Route
-                render={({ history }) => (
-                  <SearchBox history={history} />
-                )}></Route>
               <LinkContainer to='/cart'>
                 <Nav.Link>
                   <i className='fas fa-shopping-cart' />
@@ -61,7 +59,7 @@ const Header = ({ history }) => {
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/orderlist'>
-                    <NavDropdown.Item>Orderss</NavDropdown.Item>
+                    <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}
