@@ -6,7 +6,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { logout } from '../actions/userActions'
 import SearchBox from './SearchBox'
 
-const Header = ({ history }) => {
+const Header = () => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
 
