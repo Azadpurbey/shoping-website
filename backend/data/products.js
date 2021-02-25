@@ -93,6 +93,40 @@ const products = [
     rating: 3.5,
     numReviews: 12,
   },
+
+  {
+    name: 'Bed Sheet',
+    image: '/images/bedSheet.jpg',
+    description: 'Ultera soft, and awesome Comfort',
+    brand: 'Swayam',
+    category: 'Clothing',
+    price: 40.99,
+    countInStock: 10,
+    rating: 3.5,
+    numReviews: 8,
+  },
+  {
+    name: 'Bowl',
+    image: '/images/bowl.jpg',
+    description: 'Ancient bowl, 200 years old, From Akbers time',
+    brand: 'Ancient',
+    category: 'Crockery',
+    price: 899.99,
+    countInStock: 4,
+    rating: 4.8,
+    numReviews: 7,
+  },
+  {
+    name: 'Flame',
+    image: '/images/stove.jpg',
+    description: 'Master peace in the world of Stove. Altra fast Burning',
+    brand: 'Prestige',
+    category: 'Household',
+    price: 14.99,
+    countInStock: 6,
+    rating: 4.5,
+    numReviews: 12,
+  },
 ]
 
 export default products
