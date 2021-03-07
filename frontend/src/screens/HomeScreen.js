@@ -21,7 +21,6 @@ const HomeScreen = ({ match }) => {
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
   }, [dispatch, keyword, pageNumber])
-  // const products = []
   return (
     <>
       <Meta />
