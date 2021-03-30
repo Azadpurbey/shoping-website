@@ -63,9 +63,9 @@ const ProductEditScreen = ({ match, history }) => {
           'Content-Type': 'multipart/form-data',
         },
       }
-      console.log(`I hit the rout`)
+      // console.log(`I hit the rout`)
       const { data } = await axios.post('/api/upload', formData, config)
-      console.log(`path name is`, data)
+      // console.log(`path name is`, data)
       setImage(data)
       setUploading(false)
     } catch (error) {
