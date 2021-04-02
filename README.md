@@ -11,4 +11,4 @@ option, data storage using MongoDB, easy admin
 product upload using Multer, Product Review option.
 
 
-##Tools used:-​ React, Redux, MongoDB, Express, node modules.
+## Tools used:-​ React, Redux, MongoDB, Express, node modules.
